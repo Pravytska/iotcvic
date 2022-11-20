@@ -28,4 +28,38 @@
 return;
 }
 ?>
+
+
+
+<select name="Date">
+  <option value="">Select date</option>
+  <?php for ($i = 1; $i <= 31; $i++) : ?>
+  <option value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
+  <?php endfor; ?>
+</select>
+
+$conn = mysqli_connect("localhost","root","","getdob");
+if(isset($_POST['sub']))
+{
+$Year = $_POST['Year'];
+$Month = $_POST['Month'];
+$Date = $_POST['Date'];
+if ($Year != '' && $Month != '' && $Date != '') 
+   {
+   $date = $Year.'-'.$Month.'-'.$Date;
+   $sql="INSERT INTO dob VALUES  (Null,'$date')";
+   if (mysqli_query($conn,$sql))
+   {
+      echo "Record added!";
+   }
+   else
+   {
+      echo "Error!!!";
+   }
+   }
+else
+   {
+      echo "Please Select Day, Month and Year!!!";
+   }   
+}
     

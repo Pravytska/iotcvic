@@ -83,6 +83,14 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
+  Date of birth:
+  <select name="Date">
+  <option value="">Select date</option>
+  <?php for ($i = 1; $i <= 31; $i++) : ?>
+  <option value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
+  <?php endfor; ?>
+</select>
+
   <input type="submit" name="submit" value="Submit">  
 </form>
 
