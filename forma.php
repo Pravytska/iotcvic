@@ -63,3 +63,11 @@ else
    }   
 }
     
+
+
+<select name="Date">
+  <option value="">Select date</option>
+  <?php for ($i = 1; $i <= 31; $i++) : ?>
+  <option value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
+  <?php endfor; ?>
+  </select>
