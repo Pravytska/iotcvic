@@ -9,8 +9,8 @@
 
 <?php
 // define variables and set to empty values
-$firstNameErr = $lastNameErr = $emailErr = $genderErr = "";
-$firstName = $lastName = $email = $gender = $comment = "";
+$firstNameErr = $lastNameErr = $emailErr = $genderErr = $dateErr = "";
+$firstName = $lastName = $email = $gender = $comment = $date = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["firstname"])) {
@@ -32,6 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
   
+  if (empty($_POST["date"])) {
+    $dateErr = "Date is required";
+  } else {
+    $firstName = test_input($_POST["date"]);
+    // check if date only contains 
+    if (!preg_match("/^['d.m.Y' ]*$/",$date)) {
+      $date = "Only letters and white space allowed";
+    }
+  }
+
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
@@ -100,7 +110,10 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  Date of birth:
+  Date of birth: <input type="date" name="date" value="<?php echo $date;?>">
+  <span class="error">* <?php echo $dateErr;?></span>
+  <br><br>
+
   <select name="Date">
   <option value="">Select date</option>
   <?php for ($i = 1; $i <= 31; $i++) : ?>
