@@ -9,19 +9,30 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = "";
-$name = $email = $gender = $comment = "";
+$firstNameErr = $lastNameErr = $emailErr = $genderErr = "";
+$firstName = $lastName = $email = $gender = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+  if (empty($_POST["firstname"])) {
+    $firstNameErr = "First name is required";
   } else {
-    $name = test_input($_POST["name"]);
+    $firstName = test_input($_POST["firstname"]);
     // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$firstName)) {
+      $fitstNameErr = "Only letters and white space allowed";
     }
   }
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["lastname"])) {
+      $lastNameErr = "Last name is required";
+    } else {
+      $lastName = test_input($_POST["lastname"]);
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
+        $lastNameErr = "Only letters and white space allowed";
+      }
+    }
   
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
@@ -57,8 +68,11 @@ function test_input($data) {
 <h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span>
+  First name: <input type="text" name="firstname" value="<?php echo $firstName;?>">
+  <span class="error">* <?php echo $firstNameErr;?></span>
+  <br><br>
+  Last name: <input type="text" name="lastname" value="<?php echo $lastName;?>">
+  <span class="error">* <?php echo $lastNameErr;?></span>
   <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
@@ -76,7 +90,9 @@ function test_input($data) {
 
 <?php
 echo "<h2>Your Input:</h2>";
-echo $name;
+echo $firstName;
+echo "<br>";
+echo $lastName;
 echo "<br>";
 echo $email;
 echo "<br>";
