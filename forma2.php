@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $lastNameErr = "Only letters and white space allowed";
       }
     }
+  }
   
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
