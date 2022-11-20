@@ -32,16 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format";
     }
   }
-    
-  if (empty($_POST["website"])) {
-    $website = "";
-  } else {
-    $website = test_input($_POST["website"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
-    }
-  }
 
   if (empty($_POST["comment"])) {
     $comment = "";
@@ -73,9 +63,6 @@ function test_input($data) {
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Gender:
@@ -92,8 +79,6 @@ echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
-echo "<br>";
-echo $website;
 echo "<br>";
 echo $comment;
 echo "<br>";
