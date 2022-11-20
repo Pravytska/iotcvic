@@ -118,6 +118,7 @@
             fwrite($file, "\nComment: " . $comment);
             fwrite($file, "\n---------------------------------------\n");
             fclose($file);
+            echo "<script type='text/javascript'>alert('Data stored in text file successfully.');</script>";
             $firstName = $lastName = $email = $gender = $comment = $date = false;
 
             // write to mysql
