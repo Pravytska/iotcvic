@@ -22,16 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $fitstNameErr = "Only letters and white space allowed";
     }
   }
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["lastname"])) {
-      $lastNameErr = "Last name is required";
-    } else {
-      $lastName = test_input($_POST["lastname"]);
-      // check if name only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
-        $lastNameErr = "Only letters and white space allowed";
-      }
+  if (empty($_POST["lastname"])) {
+    $lastNameErr = "Last name is required";
+  } else {
+    $lastName = test_input($_POST["lastname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$lastName)) {
+      $lastNameErr = "Only letters and white space allowed";
     }
   }
   
