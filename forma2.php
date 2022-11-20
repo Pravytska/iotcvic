@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dateErr = "Date is required";
   } else {
     $firstName = test_input($_POST["date"]);
-    // check if date only contains 
+    // check if date only contains date
     if (!preg_match("/^['d.m.Y' ]*$/",$date)) {
-      $date = "Only letters and white space allowed";
+      $date = "Only date allowed";
     }
   }
 
@@ -82,6 +82,9 @@ function test_input($data) {
   Last name: <input type="text" name="lastname" value="<?php echo $lastName;?>">
   <span class="error">* <?php echo $lastNameErr;?></span>
   <br><br>
+  Date of birth: <input type="date" name="date" value="<?php echo $date;?>">
+  <span class="error">* <?php echo $dateErr;?></span>
+  <br><br>
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
@@ -92,9 +95,6 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
-  <br><br>
-  Date of birth: <input type="date" name="date" value="<?php echo $date;?>">
-  <span class="error">* <?php echo $dateErr;?></span>
   <br><br>
 
   <input type="submit" name="submit" value="Submit">  
