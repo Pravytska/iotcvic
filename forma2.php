@@ -97,6 +97,8 @@ function test_input($data) {
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
 
+  <input type="checkbox" name="conditions" value="agree" id="feedback-conditions" required><label>I agree with terms andconditions</label>
+
   <input type="submit" name="submit" value="Submit">  
 </form>
 
