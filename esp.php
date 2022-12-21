@@ -5,6 +5,7 @@
         body {
             background-image: url("https://images.freeimages.com/images/large-previews/a3b/website-rays-background-pattern-1637863.png");
             font-family: 'Raleway', sans-serif;
+            text-align:center;
         }
         .label {
             display: inline-block;
@@ -14,6 +15,9 @@
 
         .error {
             color: #FF0000;
+        }
+        h1 {
+            color: green;
         }
     </style>
 </head>
@@ -48,6 +52,28 @@
         }
     ?>
     <h1>Smart auto</h1>
+    <h4>
+        How to call PHP function
+        on the click of a Button ?
+    </h4>
+ 
+    <?php
+     
+        if(isset($_POST['button1'])) {
+            echo "This is Button1 that is selected";
+        }
+        if(isset($_POST['button2'])) {
+            echo "This is Button2 that is selected";
+        }
+    ?>
+     
+    <form method="post">
+        <input type="submit" name="button1"
+                value="Button1"/>
+         
+        <input type="submit" name="button2"
+                value="Button2"/>
+    </form>
 
 
 
