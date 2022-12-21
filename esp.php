@@ -47,8 +47,8 @@
         
     <h1>Smart auto</h1>
     <h4>
-        How to call PHP function
-        on the click of a Button ?
+    Toto inteligentné auto má 3 senzory, ako sú fotorezistor, senzor rýchlosti, ultrazvuk a tiež 3 akčné členy, ako sú ledky, servo a motory.<br> 
+    Na tejto stránke si môžete pozrieť, ako rýchlo sa toto auto pohybuje, a zistiť, ako určuje, kam môžete odbočiť, ak je cesta pred vami zablokovaná.<br>
     </h4>
      
     <form method="post">
