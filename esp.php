@@ -50,11 +50,19 @@
         How to call PHP function
         on the click of a Button ?
     </h4>
- 
+     
+    <form method="post">
+        <input type="submit" name="button1"
+                value="Button1"/>
+         
+        <input type="submit" name="button2"
+                value="Button2"/>
+    </form>
+
     <?php
      
         if(isset($_POST['button1'])) {
-            echo "This is Button1 that is selected";
+            echo "This is Button1 that is selected\n";
             // Выводим информацию из файла
             try {
                 echo loadDataFromFile($file);    
@@ -66,14 +74,6 @@
             echo "This is Button2 that is selected";
         }
     ?>
-     
-    <form method="post">
-        <input type="submit" name="button1"
-                value="Button1"/>
-         
-        <input type="submit" name="button2"
-                value="Button2"/>
-    </form>
 
 
 
