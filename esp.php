@@ -54,7 +54,7 @@
     <?php
      
         if(isset($_POST['button1'])) {
-            echo "This is Button1 that is selected\n";
+            echo "This is Button1 that is selected\r";
             // Выводим информацию из файла
             try {
                 echo loadDataFromFile($file);    
