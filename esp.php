@@ -19,6 +19,9 @@
         h1 {
             color: green;
         }
+        h4 {
+            color: 
+        }
     </style>
 </head>
 <body>
@@ -44,18 +47,10 @@
         // Файл, с которым работаем
         $file = __DIR__.'/file.txt';
         ?>
-        
-        svg(viewBox="0 0 600 300")
-        // Symbol
-        symbol#s-text
-        text(text-anchor="middle", x="50%", y="50%", dy=".35em")
-            | Smart auto 
-        // Duplicate symbols
-        use.text(xlink:href="#s-text")
-        use.text(xlink:href="#s-text")
-        use.text(xlink:href="#s-text")
-        use.text(xlink:href="#s-text")
-        use.text(xlink:href="#s-text")
+
+    <h1>
+        Smart auto
+    </h1>
     <h4>
     Toto inteligentné auto má 3 senzory, ako sú fotorezistor, senzor rýchlosti, ultrazvuk a tiež 3 akčné členy, ako sú ledky, servo a motory.<br> 
     Na tejto stránke si môžete pozrieť, ako rýchlo sa toto auto pohybuje, a zistiť, ako určuje, kam môžete odbočiť, ak je cesta pred vami zablokovaná.<br>
