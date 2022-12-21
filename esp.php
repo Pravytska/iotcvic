@@ -60,8 +60,7 @@
                 echo loadDataFromFile($file);    
             } catch (Exception $e) {
                 echo $e->getMessage();
-            }
-      ?>      
+            }    
         }
         if(isset($_POST['button2'])) {
             echo "This is Button2 that is selected";
