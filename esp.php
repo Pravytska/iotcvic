@@ -43,14 +43,8 @@
          
         // Файл, с которым работаем
         $file = __DIR__.'/file.txt';
+        ?>
          
-        // Выводим информацию из файла
-        try {
-          echo loadDataFromFile($file);    
-        } catch (Exception $e) {
-          echo $e->getMessage();
-        }
-    ?>
     <h1>Smart auto</h1>
     <h4>
         How to call PHP function
@@ -60,7 +54,12 @@
     <?php
      
         if(isset($_POST['button1'])) {
-            echo "This is Button1 that is selected";
+            // Выводим информацию из файла
+            try {
+                echo loadDataFromFile($file);    
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
         }
         if(isset($_POST['button2'])) {
             echo "This is Button2 that is selected";
