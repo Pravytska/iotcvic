@@ -54,12 +54,7 @@
     <?php
      
         if(isset($_POST['button1'])) {
-            // Выводим информацию из файла
-            try {
-                echo loadDataFromFile($file);    
-            } catch (Exception $e) {
-                echo $e->getMessage();
-            }
+            echo "This is Button1 that is selected";
         }
         if(isset($_POST['button2'])) {
             echo "This is Button2 that is selected";
