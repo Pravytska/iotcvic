@@ -54,7 +54,7 @@
     </h4>
      
     <form method="post">
-        <input type="submit" name="button1"
+        <input type="submit" name="speed"
                 value="Button1"/>
     </form>
 
@@ -72,7 +72,7 @@
     ?>
 
     <form method="post">     
-        <input type="submit" name="button2"
+        <input type="submit" name="move"
                 value="Button2"/>
     </form>
 
