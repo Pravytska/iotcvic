@@ -72,12 +72,12 @@
     ?>
 
     <form method="post">     
-        <input type="submit" name="move"
-                value="move"/>
+        <input type="submit" name="move to"
+                value="move to"/>
     </form>
 
     <?php
-        if(isset($_POST['move'])) {
+        if(isset($_POST['move to'])) {
             echo "Teraz vidíme, kam môže naše auto zabočiť:<br>";
             try {
                 echo loadDataFromFile($file);    
