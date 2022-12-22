@@ -58,24 +58,27 @@
                 value="Button1"/>
     </form>
 
-    <form method="post">     
-        <input type="submit" name="button2"
-                value="Button2"/>
-    </form>
-
     <?php
      
         if(isset($_POST['button1'])) {
             echo "This is Button1 that is selected<br>";
          // Выводим информацию из файла
             try {
-                echo loadDataFromFile($file).'<br>';    
+                echo loadDataFromFile($file."<br>");    
             } catch (Exception $e) {
                 echo $e->getMessage();
             }    
         }
+    ?>
+
+    <form method="post">     
+        <input type="submit" name="button2"
+                value="Button2"/>
+    </form>
+
+    <?php
         if(isset($_POST['button2'])) {
-            echo "This is Button2 that is selected";
+            echo "This is Button2 that is selected<br>";
             try {
                 echo loadDataFromFile($file);    
             } catch (Exception $e) {
