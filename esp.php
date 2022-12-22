@@ -64,7 +64,7 @@
             echo "Teraz môžeme vidieť rýchlosť, akou sa pohybuje naše auto:<br>";
          // Выводим информацию из файла
             try {
-                echo "<br>".join(loadDataFromFile($file));    
+                echo loadDataFromFile($file);    
             } catch (Exception $e) {
                 echo $e->getMessage();
             }    
