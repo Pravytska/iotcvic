@@ -64,7 +64,7 @@
             echo "This is Button1 that is selected<br>";
          // Выводим информацию из файла
             try {
-                echo loadDataFromFile($file."<br>");    
+                echo loadDataFromFile("<br>".join($file));    
             } catch (Exception $e) {
                 echo $e->getMessage();
             }    
