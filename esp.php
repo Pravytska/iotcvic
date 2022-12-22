@@ -55,12 +55,12 @@
      
     <form method="post">
         <input type="submit" name="speed"
-                value="Button1"/>
+                value="speed"/>
     </form>
 
     <?php
      
-        if(isset($_POST['button1'])) {
+        if(isset($_POST['speed'])) {
             echo "Teraz môžeme vidieť rýchlosť, akou sa pohybuje naše auto:<br>";
          // Выводим информацию из файла
             try {
@@ -73,11 +73,11 @@
 
     <form method="post">     
         <input type="submit" name="move"
-                value="Button2"/>
+                value="move"/>
     </form>
 
     <?php
-        if(isset($_POST['button2'])) {
+        if(isset($_POST['move'])) {
             echo "Teraz vidíme, kam môže naše auto zabočiť:<br>";
             try {
                 echo loadDataFromFile($file);    
