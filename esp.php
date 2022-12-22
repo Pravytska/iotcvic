@@ -61,10 +61,10 @@
     <?php
      
         if(isset($_POST['button1'])) {
-            echo "This is Button1 that is selected<br>";
+            echo "Teraz môžeme vidieť rýchlosť, akou sa pohybuje naše auto:<br>";
          // Выводим информацию из файла
             try {
-                echo loadDataFromFile("<br>".join($file));    
+                echo "<br>".join(loadDataFromFile($file));    
             } catch (Exception $e) {
                 echo $e->getMessage();
             }    
@@ -78,7 +78,7 @@
 
     <?php
         if(isset($_POST['button2'])) {
-            echo "This is Button2 that is selected<br>";
+            echo "Teraz vidíme, kam môže naše auto zabočiť:<br>";
             try {
                 echo loadDataFromFile($file);    
             } catch (Exception $e) {
@@ -86,11 +86,6 @@
             } 
         }
     ?>
-
-    
-
-
-
 
 </body>
 </html>
