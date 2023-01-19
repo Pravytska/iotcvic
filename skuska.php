@@ -148,11 +148,7 @@
             <span class="error">* <?php echo $fifthNumberErr; ?></span>
             <br><br>
             
-            <?php $filed = "numbers.txt";
-            $rez = file_get_contents($filed);
-            $rez .= "\r\nИ еще одна новая строка";
-            echo file_put_contents($filed, $rez);
-            ?>
+            <?php $loadss = file("numbers.txt"); echo $loadss[0]; ?>
 
             <input type="submit" name="submit" value="Submit">
             
