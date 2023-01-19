@@ -129,19 +129,19 @@
         <h2>Numbers</h2>
         <p><span class="error">* required field</span></p>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <span class="label">First Number: </span><input type="text" name="firstnumber" value="<?php echo $firstNumber; ?>">
+            <span class="label">First Number: </span><input type="number" name="firstnumber" value="<?php echo $firstNumber; ?>">
             <span class="error">* <?php echo $firstNumberErr; ?></span>
             <br><br>
-            <span class="label">Second Number: </span><input type="text" name="secondnumber" value="<?php echo $secondNumber; ?>">
+            <span class="label">Second Number: </span><input type="number" name="secondnumber" value="<?php echo $secondNumber; ?>">
             <span class="error">* <?php echo $secondNumberErr; ?></span>
             <br><br>
-            <span class="label">Third Number: </span><input type="text" name="thirdnumber" value="<?php echo $thirdNumber; ?>">
+            <span class="label">Third Number: </span><input type="number" name="thirdnumber" value="<?php echo $thirdNumber; ?>">
             <span class="error">* <?php echo $thirdNumberErr; ?></span>
             <br><br>
-            <span class="label">Fourth Number: </span><input type="text" name="fourthnumber" value="<?php echo $fourthNumber; ?>">
+            <span class="label">Fourth Number: </span><input type="number" name="fourthnumber" value="<?php echo $fourthNumber; ?>">
             <span class="error">* <?php echo $fourthNumberErr; ?></span>
             <br><br>
-            <span class="label">Fifth Number: </span><input type="text" name="fifthnumber" rows="5" value="<?php echo $fifthNumber; ?>">
+            <span class="label">Fifth Number: </span><input type="number" name="fifthnumber" rows="5" value="<?php echo $fifthNumber; ?>">
             <br><br>
             
             <input type="submit" name="submit" value="Submit">
