@@ -104,12 +104,11 @@
     
             if ($firstNumber != "" && $secondNumber != "" &&  $thirdNumber != "" && $fourthNumber != "" && $fifthNumber != "") {
                 $file = fopen("number.txt", "a");
-                fwrite($file, "First Number: " . $firstNumber);
-                fwrite($file, "\nSecond Number: " . $secondNumber);
-                fwrite($file, "\nThird Number: " . $thirdNumber);
-                fwrite($file, "\nFourth Number: " . $fourthNumber);
-                fwrite($file, "\nFifth Number: " . $fifthNumber);
-                fwrite($file, "\n---------------------------------------\n");
+                fwrite($file, $firstNumber);
+                fwrite($file, $secondNumber);
+                fwrite($file, $thirdNumber);
+                fwrite($file, $fourthNumber);
+                fwrite($file, $fifthNumber);
                 fclose($file);
                 echo "<script type='text/javascript'>alert('Data stored in text file successfully.');</script>";
                 // $file1 = fopen("numbers/txt", "w");
@@ -149,6 +148,7 @@
             <br><br>
             
             <?php $a = file_get_contents("number.txt"); echo $a; ?>
+            <br><br>
 
             <input type="submit" name="submit" value="Submit">
             
