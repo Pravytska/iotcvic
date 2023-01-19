@@ -149,9 +149,7 @@
             <br><br>
             
             <input type="submit" name="submit" value="Submit">
-            <h5><?php$file1 = fopen("numbers/txt", "w");
-                echo fwrite($file1);
-                fclose($file1);?></h5>
+            <?php $a = file_get_contents("numbers.txt"); echo $a; ?>
     </form>
     </body>
 </html>
