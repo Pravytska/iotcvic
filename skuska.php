@@ -124,7 +124,7 @@
             <span class="label">Second Number: </span><input type="text" name="secondnumber" value="<?php echo $secondNumber; ?>">
             <span class="error">* <?php echo $secondNumberErr; ?></span>
             <br><br>
-            <span class="label">Third Number: </span><input type="date" name="thirdnumber" value="<?php echo $thirdNumber; ?>">
+            <span class="label">Third Number: </span><input type="text" name="thirdnumber" value="<?php echo $thirdNumber; ?>">
             <span class="error">* <?php echo $thirdNumberErr; ?></span>
             <br><br>
             <span class="label">Fourth Number: </span><input type="text" name="fourthnumber" value="<?php echo $fourthNumber; ?>">
