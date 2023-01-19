@@ -112,9 +112,9 @@
                 fwrite($file, "\n---------------------------------------\n");
                 fclose($file);
                 echo "<script type='text/javascript'>alert('Data stored in text file successfully.');</script>";
-                $file1 = fopen("numbers/txt", "w");
-                echo fwrite($file1);
-                fclose($file1);
+                // $file1 = fopen("numbers/txt", "w");
+                // echo fwrite($file1);
+                // fclose($file1);
                 $firstNumber = $secondNumber = $thirdNumber = $fourthNumber = $fifthNumber = false;
             }
         }
@@ -149,6 +149,9 @@
             <br><br>
             
             <input type="submit" name="submit" value="Submit">
+            <h5><?php$file1 = fopen("numbers/txt", "w");
+                echo fwrite($file1);
+                fclose($file1);?></h5>
     </form>
     </body>
 </html>
