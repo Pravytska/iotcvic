@@ -112,6 +112,9 @@
                 fwrite($file, "\n---------------------------------------\n");
                 fclose($file);
                 echo "<script type='text/javascript'>alert('Data stored in text file successfully.');</script>";
+                $file1 = fopen("numbers/txt", "w");
+                echo fwrite($file1);
+                fclose($file1);
                 $firstNumber = $secondNumber = $thirdNumber = $fourthNumber = $fifthNumber = false;
             }
         }
