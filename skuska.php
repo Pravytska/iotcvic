@@ -103,7 +103,7 @@
             }
     
             if ($firstNumber != "" && $secondNumber != "" &&  $thirdNumber != "" && $fourthNumber != "" && $fifthNumber != "") {
-                $file = fopen("number.txt", "a");
+                $file = fopen("skuska.txt", "a");
                 fwrite($file, $firstNumber);
                 fwrite($file, $secondNumber);
                 fwrite($file, $thirdNumber);
@@ -147,7 +147,7 @@
             <span class="error">* <?php echo $fifthNumberErr; ?></span>
             <br><br>
             
-            <?php $a = file_get_contents("number.txt"); echo $a; ?>
+            <?php $a = file_get_contents("skuska.txt"); echo $a; ?>
             <br><br>
 
             <input type="submit" name="submit" value="Submit">
