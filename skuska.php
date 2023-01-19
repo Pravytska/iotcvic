@@ -18,8 +18,19 @@
         }
 
         input[type=text],
+        input[type=date],
+        textarea {
+            padding: 5px;
+            border: 2px solid #ccc;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
 
         input[type=text]:focus,
+        input[type=date]:focus,
+        textarea:focus {
+            border-color: #333;
+        }
 
         input[type=submit] {
             width: 400px;
