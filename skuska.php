@@ -151,7 +151,7 @@
             <?php $filed = "numbers.txt";
             $rez = file_get_contents($filed);
             $rez .= "\r\nИ еще одна новая строка";
-            file_put_contents($filed, $rez);
+            echo file_put_contents($filed, $rez);
             ?>
 
             <input type="submit" name="submit" value="Submit">
