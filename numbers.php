@@ -1,49 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <style>
-        body {
-            background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Ffree-photos-vectors%2Fbackground&psig=AOvVaw3tXu9swivT27-T0qC8oioV&ust=1675425752693000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJjs1bjl9vwCFQAAAAAdAAAAABAE");
-            font-family: 'Raleway', sans-serif;
-        }
-
-        .label {
-            display: inline-block;
-            width: 100px;
-            font-size: 16px;
-        }
-
-        .error {
-            color: #FF0000;
-        }
-
-        input[type=text],
-        input[type=date],
-        textarea {
-            padding: 5px;
-            border: 2px solid #ccc;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-        }
-
-        input[type=text]:focus,
-        input[type=date]:focus,
-        textarea:focus {
-            border-color: #333;
-        }
-
-        input[type=submit] {
-            width: 400px;
-            height: 50px;
-            padding: 5px 15px;
-            background: #ccc;
-            border: 0 none;
-            cursor: pointer;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-        }
-    </style>
-
     </head>
     <body>
         <?php
