@@ -55,7 +55,7 @@
             }
     
             if ($firstNumber != "" && $secondNumber != "" &&  $thirdNumber != "" && $fourthNumber != "" && $fifthNumber != "") {
-                $file = fopen("number123.txt", "a");
+                $file = fopen("number1234.txt", "a");
                 fwrite($file, $firstNumber);
                 fwrite($file, $secondNumber);
                 fwrite($file, $thirdNumber);
@@ -98,7 +98,7 @@
 
             <input type="submit" name="submit" value="Submit">
             <br><br>
-            <?php $a = file_get_contents("number123.txt"); echo $a; ?>
+            <?php $a = file_get_contents("number1234.txt"); echo $a; ?>
             
     </form>
     </body>
