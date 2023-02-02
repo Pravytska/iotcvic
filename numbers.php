@@ -77,7 +77,7 @@
         }
         ?>
 
-        <h2>Numbers</h2>
+        <h2>Skuška</h2>
         <p><span class="error">* required field</span></p>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <span class="label">First Number: </span><input type="number" name="firstnumber" value="<?php echo $firstNumber; ?>">
