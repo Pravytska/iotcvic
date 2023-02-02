@@ -12,7 +12,6 @@
                 $firstNumberErr = "First namber is required";
             } else {
                 $firstNumber = test_input($_POST["firstnumber"]);
-                // check if only contains numbers
                 if (!preg_match("/[^0-9 ]*$/", $firstNumber)) {
                     $firstNumberErr = "Only numbers allowed";
                     $firstNumber = "";
@@ -22,7 +21,6 @@
                 $secondNumberErr = "Second Number is required";
             } else {
                 $secondNumber = test_input($_POST["secondnumber"]);
-                // check if only contains numbers
                 if (!preg_match("/[^0-9 ]*$/", $secondNumber)) {
                     $secondNumberErr = "Only numbers allowed";
                     $secondNumber = "";
@@ -32,7 +30,6 @@
                 $thirdNumberErr = "Third Number is required";
             } else {
                 $thirdNumber = test_input($_POST["thirdnumber"]);
-                // check if only contains numbers
                 if (!preg_match("/[^0-9 ]*$/", $thirdNumber)) {
                     $thirdNumberErr = "Only numbers allowed";
                     $thirdNumber = "";
@@ -42,7 +39,6 @@
                 $fourthNumberErr = "Fourth Number is required";
             } else {
                 $fourthNumber = test_input($_POST["fourthnumber"]);
-                // check if only contains numbers
                 if (!preg_match("/[^0-9 ]*$/", $fourthNumber)) {
                     $fourthNumberErr = "Only numbers allowed";
                     $fourthNumber = "";
@@ -52,7 +48,6 @@
                 $fifthNumberErr = "Fifth Number is required";
             } else {
                 $fifthNumber = test_input($_POST["fifthnumber"]);
-                // check if only contains numbers
                 if (!preg_match("/[^0-9 ]*$/", $fifthNumber)) {
                     $fifthNumberErr = "Only numbers allowed";
                     $fifthNumber = "";
@@ -60,7 +55,7 @@
             }
     
             if ($firstNumber != "" && $secondNumber != "" &&  $thirdNumber != "" && $fourthNumber != "" && $fifthNumber != "") {
-                $file = fopen("skuska.txt", "a");
+                $file = fopen("skuska1.txt", "a");
                 fwrite($file, $firstNumber);
                 fwrite($file, $secondNumber);
                 fwrite($file, $thirdNumber);
@@ -68,9 +63,6 @@
                 fwrite($file, $fifthNumber);
                 fclose($file);
                 echo "<script type='text/javascript'>alert('Data stored in text file successfully.');</script>";
-                // $file1 = fopen("numbers/txt", "w");
-                // echo fwrite($file1);
-                // fclose($file1);
                 $firstNumber = $secondNumber = $thirdNumber = $fourthNumber = $fifthNumber = false;
             }
         }
@@ -106,7 +98,7 @@
 
             <input type="submit" name="submit" value="Submit">
             <br><br>
-            <?php $a = file_get_contents("skuska.txt"); echo $a; ?>
+            <?php $a = file_get_contents("skuska1.txt"); echo $a; ?>
             
     </form>
     </body>
