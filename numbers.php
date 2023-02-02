@@ -105,6 +105,7 @@
             <br><br>
 
             <input type="submit" name="submit" value="Submit">
+            <br><br>
             <?php $a = file_get_contents("skuska.txt"); echo $a; ?>
             
     </form>
