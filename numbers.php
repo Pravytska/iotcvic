@@ -103,11 +103,9 @@
             <span class="label">Fifth Number: </span><input type="number" name="fifthnumber" rows="5" value="<?php echo $fifthNumber; ?>">
             <span class="error">* <?php echo $fifthNumberErr; ?></span>
             <br><br>
-            
-            <?php $a = file_get_contents("skuska.txt"); echo $a; ?>
-            <br><br>
 
             <input type="submit" name="submit" value="Submit">
+            <?php $a = file_get_contents("skuska.txt"); echo $a; ?>
             
     </form>
     </body>
